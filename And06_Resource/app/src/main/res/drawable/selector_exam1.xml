@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 어떤 위젯이 선택됐을 때 또는 상황에 따라서 다른 색상을 주고 싶을 때 사용 -->
+    <item
+        android:state_pressed="true"
+        android:drawable="@color/black"
+        />
+    <item
+        android:drawable="@color/app_main_color"
+        />
+
+</selector>
