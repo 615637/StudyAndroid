@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.example.and09_fragmentadaper.listv.ListFragment;
+import com.example.and09_fragmentadaper.melon.MelonFragment;
 
 public class AdapterActivity extends AppCompatActivity {
 //    ListView listv;
@@ -30,6 +31,10 @@ public class AdapterActivity extends AppCompatActivity {
         btn_list.setOnClickListener(v -> {
                 manager.beginTransaction().replace(R.id.container, new ListFragment()).commit();
                 });
+
+        btn_practice.setOnClickListener(v -> {
+            manager.beginTransaction().replace(R.id.container, new MelonFragment()).commit();
+        });
 
         //용도나 형태에 따라서 어댑터 종류 많음.
         //사용빈도 가장 낮은 방식 : ArrayAdapter(기본적으로 안드로이드에서 제공해주는 어댑터)
