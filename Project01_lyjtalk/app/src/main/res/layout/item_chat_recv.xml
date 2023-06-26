@@ -6,7 +6,9 @@
     android:orientation="horizontal"
     android:id="@+id/ln_friend"
     android:padding="5dp">
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
         <androidx.cardview.widget.CardView
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -17,11 +19,31 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/namdoil"/>
         </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp">
         <TextView
             android:id="@+id/tv_name"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="남도일"/>
+            android:text="남도일"
+            android:textSize="15dp"
+            android:textFontWeight="700"/>
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_gravity="left"
+            android:text="ㅋㅋㅋㅋㅋㅋ"
+            android:textColor="#BFC6CD" />
     </LinearLayout>
+
+
+
+</LinearLayout>

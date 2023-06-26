@@ -1,16 +1,10 @@
-package com.example.project01_lyjtalk.Friend;
+package com.example.project01_lyjtalk.Chat;
 
 import java.io.Serializable;
 
-public class FriendDTO implements Serializable {
+public class ChatDTO implements Serializable {
     private int resImgId;
     private String name, msg;
-
-    public FriendDTO(int resImgId, String name, String msg) {
-        this.resImgId = resImgId;
-        this.name = name;
-        this.msg = msg;
-    }
 
     public int getResImgId() {
         return resImgId;
@@ -33,6 +27,12 @@ public class FriendDTO implements Serializable {
     }
 
     public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public ChatDTO(int resImgId, String name, String msg) {
+        this.resImgId = resImgId;
+        this.name = name;
         this.msg = msg;
     }
 }
