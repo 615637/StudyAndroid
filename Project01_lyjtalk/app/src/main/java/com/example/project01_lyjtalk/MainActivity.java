@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.project01_lyjtalk.Chat.ChatFragment;
 import com.example.project01_lyjtalk.Friend.FriendFragment;
 import com.example.project01_lyjtalk.databinding.ActivityMainBinding;
+import com.example.project01_lyjtalk.opentalk.OpenTalkMainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 actionBar.setTitle("채팅");
             }else if(item.getItemId()==R.id.page_3){
                 actionBar.setTitle("오픈채팅");
+                fragment = new OpenTalkMainFragment();
             }else if(item.getItemId()==R.id.page_4){
                 actionBar.setTitle("쇼핑");
             }else if(item.getItemId()==R.id.page_5){
