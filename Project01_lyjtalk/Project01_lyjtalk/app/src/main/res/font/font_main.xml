@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    100 : Light
+    200 : 가벼운 글씨체
+    400 : 일반
+    600 : 세미볼드
+    700 : 굵게
+    -->
+
+    <font
+        android:fontStyle="normal"
+        android:font="@font/orbit"
+        android:fontWeight="400"/>
+
+    <font
+        android:fontStyle="normal"
+        android:font="@font/nanumgothic_extrabold"
+        android:fontWeight="700"/>
+
+
+</font-family>

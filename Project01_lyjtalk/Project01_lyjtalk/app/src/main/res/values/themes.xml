@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Project01_lyjtalk" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/main_color</item>
+
+        <!-- 시계 나오는 부분(status bar) 색상 흰색으로 바꿈 -->
+         <item name="android:statusBarColor">@color/main_color</item>
+         <item name="android:windowLightStatusBar">true</item>
+         <item name="actionBarSize">50dp</item>
+         <item name="fontFamily">@font/font_main</item>
+    </style>
+
+    <style name="Theme.Project01_lyjtalk" parent="Base.Theme.Project01_lyjtalk" />
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ln_chatroom"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_width="120dp"
+    android:layout_height="150dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imgv_geoji"
+            android:alpha="0.8"
+            android:scaleType="fitXY"
+            android:src="@drawable/geoji1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_geojichat"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="거지방"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_geojicnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:text="144명 | 방금 대화"
+            android:textColor="#fff"
+            android:textSize="12dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

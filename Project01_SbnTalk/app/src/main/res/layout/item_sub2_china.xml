@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/container_frame_china"
+        android:layout_width="100dp"
+        android:layout_height="150dp">
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="10dp">
+
+
+    <ImageView
+        android:id="@+id/imgv_china"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pepe1"/>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_title_china"
+            android:layout_gravity="bottom"
+            android:textSize="11dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비빔사 자격증 준비반"/>
+
+        <TextView
+            android:id="@+id/tv_cnt_china"
+            android:textSize="11dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9명"/>
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+
+</LinearLayout>

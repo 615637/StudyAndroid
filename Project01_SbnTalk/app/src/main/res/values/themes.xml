@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Project01_SbnTalk" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/main_color</item>
+
+        <!--    위에 시계나오는 부분 스테이터스바라고 하고 색상을 흰색으로 바꿨다.    -->
+        <item name="android:statusBarColor">@color/main_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarSize">50dp</item>
+        <item name="fontFamily">@font/poor_orbit</item>
+    </style>
+
+    <style name="Theme.Project01_SbnTalk" parent="Base.Theme.Project01_SbnTalk" />
+</resources>
