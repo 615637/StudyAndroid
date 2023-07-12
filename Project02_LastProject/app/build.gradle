@@ -46,4 +46,8 @@ dependencies {
     implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.9.0'
     // String json 단일 데이터 타입용 컨버터
     implementation group: 'com.squareup.retrofit2', name: 'converter-scalars', version: '2.9.0'
+    // MainActivity에 바텀네비게이션 외부 라이브러리 사용(jitpack.io 같이 추가함)
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+    // 목록을 가진 뷰가 맨 위로 스크롤 되면 새로고침 하는 디자인이 나옴(스피너)
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }
