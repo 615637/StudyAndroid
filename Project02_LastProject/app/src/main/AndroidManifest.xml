@@ -27,6 +27,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 카카오 소셜로그인용 Activity (실제 안띄움. 카카오 내부처리에 필요함) -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
+                <data android:host="oauth"
+                    android:scheme="kakaobc0be8a57b7da67615c11f7e20b914cc" />
+            </intent-filter>
+        </activity>
+
+
+
+
     </application>
 
 </manifest>
