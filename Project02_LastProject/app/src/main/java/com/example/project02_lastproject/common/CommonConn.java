@@ -85,6 +85,8 @@ public class CommonConn {
         callBack.onResult(isResult, data);
     }
 
+    // 옵저버 패턴 . 감시하다가 어떤 작업이 끝나면 특정 메소드를 실행함 : View.OnClickListener
+    // 1.
     public interface LyjCallBack{
         public void onResult(boolean isResult, String data);
     }

@@ -1,0 +1,34 @@
+insert into CRUD_RETROFIT(COL1, COL2)
+values('안녕', '안녕하세요');
+
+update CRUD_RETROFIT set col1='aa', col2='bb' where col_no=1;
+
+delete from CRUD_RETROFIT where col_no=1;
+
+
+select * from CRUD_RETROFIT;
+
+
+rollback;
+
+commit;
+
+
+
+CREATE OR REPLACE TRIGGER TRG_CRUD_RETROFIT_PK
+BEFORE INSERT -- 시점(추가 전 시점)
+ON CRUD_RETROFIT --트리거를 부착할 테이블 이름
+FOR EACH ROW --각 행마다 적용
+BEGIN --실행부 : 자바의 중괄호 (for(){})
+    :NEW.COL_NO := SEQ_CRUD_RETROFIT.NEXTVAL;
+END;
+
+CREATE SEQUENCE SEQ_CRUD_RETROFIT INCREMENT BY 1;
+
+DROP TRIGGER TRG_CRUD_RETROFIT_PK;
+
+CREATE TABLE CRUD_RETROFIT(
+    COL_NO NUMBER PRIMARY KEY NOT NULL,
+    COL1 VARCHAR2(1000),
+    COL2 VARCHAR2(1000)
+);

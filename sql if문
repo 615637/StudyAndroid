@@ -1,0 +1,18 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+v_Str varchar2(100); --변수 선언
+
+BEGIN
+v_Str := '값할당 ㅎㅇ';
+
+IF 1 = 2 THEN
+    DBMS_OUTPUT.PUT_LINE('조건이 트루입니다'); --syso
+
+ELSIF 2 = 2 THEN
+    DBMS_OUTPUT.PUT_LINE('조건이 트루입니다');
+
+ELSE
+    DBMS_OUTPUT.PUT_LINE('조건이 폴스입니다');
+END IF;
+END;
