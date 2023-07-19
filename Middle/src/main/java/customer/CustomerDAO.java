@@ -17,9 +17,7 @@ public class CustomerDAO {
 	}
 	
 	public void delete(int id) {
-//		int result=
 		sql.delete("cu.delete", id);
-//		System.out.println("성공여부 " + result);
 	}
 	
 	public void insert(CustomerVO vo) {
