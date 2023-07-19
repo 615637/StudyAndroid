@@ -7,15 +7,17 @@ import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
+import retrofit2.http.QueryMap;
 import retrofit2.http.Url;
 
 public interface RetrofitInterface {
+
+
+    @GET("{url}")
+    Call<String> clientGetLogin(@Url String url, @QueryMap HashMap<String, Object> paramMap);
 
     @FormUrlEncoded
     @POST
     Call<String> clientPostMethod(@Url String url, @FieldMap HashMap<String, Object> paramMap);
 
-    @GET("{login}")
-    Call<String> getLogin(@Path("login") String mapping, @FieldMap HashMap<String, Object> paramMap);
 }

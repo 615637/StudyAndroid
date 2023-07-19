@@ -1,5 +1,6 @@
 package com.example.project02_lastproject.member;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.example.project02_lastproject.MainActivity;
 import com.example.project02_lastproject.common.CommonConn;
@@ -38,6 +40,9 @@ public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        checkPermission();
+
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -187,5 +192,38 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    //재사용 가능하도록 commonMethod등의 클래스 내부에 넣어두면 좋음.
+    private final int REQ_PERMISSION = 1000;
+    private void checkPermission(){
+        String[] permissions = {Manifest.permission.CAMERA, Manifest.permission.ACCESS_MEDIA_LOCATION}; //카메라 권한을 String으로 가져옴.
+        //ContextCompat(액티비티가 아닌 곳), ActivityCompat(액티비티)
 
+        for(int i = 0; i<permissions.length; i++){
+            if(ActivityCompat.checkSelfPermission(this, permissions[i]) == PackageManager.PERMISSION_DENIED){
+                ActivityCompat.requestPermissions(this, permissions, REQ_PERMISSION);
+                break;
+            }
+        }
+
+//        int result = ActivityCompat.checkSelfPermission(this, permissions[0]);
+//        Log.d("권한", "checkPermission: " + result);
+//        Log.d("권한", "checkPermission: "+ PackageManager.PERMISSION_GRANTED);
+//        Log.d("권한", "checkPermission: "+ PackageManager.PERMISSION_DENIED);
+//
+//        if(ActivityCompat.shouldShowRequestPermissionRationale(this, permissions[0])){
+//            Log.d("권한", "checkPermission: 설명이 필요한 권한");
+//            ActivityCompat.requestPermissions(this, permissions, REQ_PERMISSION);
+//        }else {
+//            Log.d("권한", "checkPermission: 설명 필요 없음");
+//            ActivityCompat.requestPermissions(this, permissions, REQ_PERMISSION);
+//        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(REQ_PERMISSION == requestCode){
+            Log.d("권한", "onRequestPermissionsResult: 권한 요청 완료");
+        }
+    }
 }

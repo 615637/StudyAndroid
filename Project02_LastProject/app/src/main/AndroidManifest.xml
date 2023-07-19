@@ -4,6 +4,20 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--실제로 권한 요청을 받아와야 하는 것 ↓-->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+
+
+
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--카메라의 경우 안드로이드 하드웨어이므로 아래 속성을 추가해줘야 함-->
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera2" android:required="true"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +30,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".practice.PracActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -26,25 +43,22 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- 카카오 소셜로그인용 Activity (실제 안띄움. 카카오 내부처리에 필요함) -->
+        </activity> <!-- 카카오 소셜로그인용 Activity (실제 안띄움. 카카오 내부처리에 필요함) -->
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakaobc0be8a57b7da67615c11f7e20b914cc" />
             </intent-filter>
         </activity>
-
-
-
-
     </application>
 
 </manifest>
