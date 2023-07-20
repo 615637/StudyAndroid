@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    >
     <EditText
+        android:maxLength="16"
+        android:hint="이름입력"
         android:id="@+id/edt_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="이름입력"
-        android:maxLength="16"/>
-
+        android:layout_height="wrap_content"/>
     <EditText
+        android:maxLength="40"
+        android:hint="이메일"
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="이메일"
-        android:maxLength="40"/>
-
+        android:layout_height="wrap_content"/>
     <EditText
+        android:maxLength="13"
+        android:hint="핸드폰"
         android:id="@+id/edt_phone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="핸드폰"
-        android:maxLength="13"/>
-
+        android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/btn_submit"
+        android:text="추가하기"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="추가하기"/>
-
+        android:layout_height="wrap_content"/>
 </LinearLayout>

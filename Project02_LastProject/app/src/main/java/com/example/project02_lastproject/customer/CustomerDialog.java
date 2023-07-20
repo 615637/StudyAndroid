@@ -20,39 +20,38 @@ public class CustomerDialog extends Dialog {
         Button btn_submit = findViewById(R.id.btn_submit);
 
         if(customerVO == null){
-            btn_submit.setOnClickListener(v -> {
-                dismiss(); //다이얼로그 제일 중요 속성 : show() 보이기, dismiss() 안보이기
-                CommonConn conn = new CommonConn(context, "insert.cu");
-                conn.addParamMap("name", edt_name.getText().toString());
-                conn.addParamMap("email", edt_email.getText().toString());
-                conn.addParamMap("phone", edt_phone.getText().toString());
-                conn.onExcute(new CommonConn.LyjCallBack() {
-                    @Override
-                    public void onResult(boolean isResult, String data) {
+            btn_submit.setOnClickListener(v->{
 
-                    }
+                CommonConn conn = new CommonConn(context , "insert.cu");
+                conn.addParamMap("name" , edt_name.getText().toString());
+                conn.addParamMap("email" , edt_email.getText().toString());
+                conn.addParamMap("phone" , edt_phone.getText().toString());
+                conn.onExcute((isResult, data) -> {
+
                 });
+                //Insert처리를 해주면 됨.
+                dismiss();//다이얼로그의 제일 중요한 속성 show()보이다 , dismiss()안보이다
             });
-        }else {
+        }else{
             btn_submit.setText("수정하기");
             edt_name.setText(customerVO.getName());
             edt_phone.setText(customerVO.getPhone());
             edt_email.setText(customerVO.getEmail());
-            btn_submit.setOnClickListener(v-> {
+            btn_submit.setOnClickListener(v->{
 
-                CommonConn conn = new CommonConn(context, "update.cu");
-                conn.addParamMap("id", customerVO.getId());
-                conn.addParamMap("name", edt_name.getText().toString());
-                conn.addParamMap("email", edt_email.getText().toString());
-                conn.addParamMap("phone", edt_phone.getText().toString());
+                CommonConn conn = new CommonConn(context , "update.cu");
+                conn.addParamMap("id" , customerVO.getId());
+                conn.addParamMap("name" , edt_name.getText().toString());
+                conn.addParamMap("email" , edt_email.getText().toString());
+                conn.addParamMap("phone" , edt_phone.getText().toString());
                 conn.onExcute((isResult, data) -> {
 
                 });
+                //Insert처리를 해주면 됨.
+                dismiss();//다이얼로그의 제일 중요한 속성 show()보이다 , dismiss()안보이다
             });
-            }
-
+        }
 
 
     }
 }
-

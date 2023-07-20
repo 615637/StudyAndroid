@@ -5,21 +5,21 @@
         android:enabled="true"
         android:id="@+id/menu_cus"
         android:title="CUS"
-        android:icon="@drawable/customer"/>
+        android:icon="@drawable/ic_customer"/>
 
     <item
         android:id="@+id/menu_emp"
         android:title="EMP"
-        android:icon="@drawable/employee"/>
+        android:icon="@drawable/ic_emp"/>
 
     <item
         android:id="@+id/menu_board"
         android:title="BOARD"
-        android:icon="@drawable/board"/>
+        android:icon="@drawable/ic_board"/>
 
     <item
         android:id="@+id/menu_godata"
         android:title="Godata"
-        android:icon="@drawable/data"/>
+        android:icon="@drawable/ic_go"/>
 
 </menu>
